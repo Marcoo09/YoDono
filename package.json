@@ -1,0 +1,66 @@
+{
+  "name": "YoDono",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android --variant=developmentDebug --appId=com.YoDono.debug",
+    "ios": "react-native run-ios --scheme 'YoDono Debug' --configuration Debug",
+    "start": "react-native start",
+    "test": "TZ=UTC jest --detectOpenHandles --colors",
+    "lint": "eslint .",
+    "metro:resetCache": "rm -rf \"$TMPDIR\"/haste-map-metro* \"$TMPDIR\"/metro-cache*"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-native": "0.60.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.6.0",
+    "@babel/runtime": "7.6.0",
+    "@react-native-community/eslint-config": "0.0.5",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "@types/react-native": "^0.60.15",
+    "@types/react-test-renderer": "^16.9.0",
+    "babel-jest": "24.9.0",
+    "eslint": "6.4.0",
+    "husky": "1.3.1",
+    "jest": "24.9.0",
+    "lint-staged": "8.1.4",
+    "metro-react-native-babel-preset": "0.56.0",
+    "prettier": "1.16.4",
+    "react-native-typescript-transformer": "^1.2.13",
+    "react-test-renderer": "16.8.6",
+    "ts-jest": "^24.1.0",
+    "tslib": "1.9.3",
+    "tslint": "5.16.0",
+    "tslint-config-airbnb": "5.11.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-eslint-rules": "5.4.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.6.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "rnpm": {
+    "assets": [
+      "src/assets/fonts"
+    ]
+  }
+}
