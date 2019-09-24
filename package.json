@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android --variant=developmentDebug --appId=com.YoDono.debug",
-    "ios": "react-native run-ios --scheme 'YoDono Debug' --configuration Debug",
+    "ios": "react-native run-ios --scheme 'YoDono'",
     "start": "react-native start",
     "test": "TZ=UTC jest --detectOpenHandles --colors",
     "lint": "eslint .",
