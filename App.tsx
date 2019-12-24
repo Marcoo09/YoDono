@@ -3,10 +3,15 @@ import {StyleSheet} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {AppContainer} from './src/navigation';
 import {setNavigator} from './src/common/navigation';
+import {Provider as PaperProvider} from 'react-native-paper';
 import 'react-native-gesture-handler';
 
 const App = () => {
-  return <AppContainer ref={setNavigator} />;
+  return (
+    <PaperProvider>
+      <AppContainer ref={setNavigator} />
+    </PaperProvider>
+  );
 };
 
 const styles = StyleSheet.create({
