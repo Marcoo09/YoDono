@@ -1,25 +1,12 @@
-import React, {Fragment} from 'react';
-import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {AppContainer} from './src/navigation';
+import {setNavigator} from './src/common/navigation';
+import 'react-native-gesture-handler';
 
 const App = () => {
-  return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          <LearnMoreLinks />
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
-  );
+  return <AppContainer ref={setNavigator} />;
 };
 
 const styles = StyleSheet.create({
