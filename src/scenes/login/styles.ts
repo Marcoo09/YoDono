@@ -1,15 +1,7 @@
-import React from 'react';
-import {StyleSheet} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {AppContainer} from './src/navigation';
-import {setNavigator} from './src/common/navigation';
-import 'react-native-gesture-handler';
+import {StyleSheet} from 'react-native';
 
-const App = () => {
-  return <AppContainer ref={setNavigator} />;
-};
-
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
   },
@@ -47,5 +39,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-export default App;

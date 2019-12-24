@@ -19,7 +19,8 @@
 		30843F8817D3FD26F62E007A /* libPods-YoDonoFrontend-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 176BA49EE15A2B0E4572931E /* libPods-YoDonoFrontend-tvOSTests.a */; };
 		5F2934260ECB96CE5DAD98DF /* libPods-YoDonoFrontend-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 233481349E4A17971E26DD5D /* libPods-YoDonoFrontend-tvOS.a */; };
 		7878F9C568837957280F4502 /* libPods-YoDonoFrontendTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9A4BFB9797BE337F1D1A3C /* libPods-YoDonoFrontendTests.a */; };
-		CC7061D2229392DCE08DE2F3 /* libPods-YoDonoFrontend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C79857D2A85D58377F43A8CE /* libPods-YoDonoFrontend.a */; };
+		8A696BED23B297B100D23F7D /* libPods-YoDonoFrontend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A696BEC23B297B100D23F7D /* libPods-YoDonoFrontend.a */; };
+		8A696BEF23B297BB00D23F7D /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A696BEE23B297BB00D23F7D /* libRNGestureHandler.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "YoDonoFrontend-tvOS";
+		};
+		8A696BE723B295A300D23F7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A696BE223B295A300D23F7D /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		8A696BE923B295A300D23F7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A696BE223B295A300D23F7D /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,6 +77,9 @@
 		7407FD51EFAB63DAA75EAAAF /* Pods-YoDonoFrontend-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoDonoFrontend-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-YoDonoFrontend-tvOSTests/Pods-YoDonoFrontend-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		795197D471CE6690E5867988 /* Pods-YoDonoFrontend-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoDonoFrontend-tvOS.release.xcconfig"; path = "Target Support Files/Pods-YoDonoFrontend-tvOS/Pods-YoDonoFrontend-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		88D7A5DAC197E54A6127B49E /* Pods-YoDonoFrontend-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoDonoFrontend-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-YoDonoFrontend-tvOS/Pods-YoDonoFrontend-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8A696BE223B295A300D23F7D /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		8A696BEC23B297B100D23F7D /* libPods-YoDonoFrontend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-YoDonoFrontend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A696BEE23B297BB00D23F7D /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9652C55F71CC5B7AFB4C2657 /* Pods-YoDonoFrontend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoDonoFrontend.release.xcconfig"; path = "Target Support Files/Pods-YoDonoFrontend/Pods-YoDonoFrontend.release.xcconfig"; sourceTree = "<group>"; };
 		C79857D2A85D58377F43A8CE /* libPods-YoDonoFrontend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoDonoFrontend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8C2B176B0153B36E0EA176 /* Pods-YoDonoFrontendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoDonoFrontendTests.release.xcconfig"; path = "Target Support Files/Pods-YoDonoFrontendTests/Pods-YoDonoFrontendTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC7061D2229392DCE08DE2F3 /* libPods-YoDonoFrontend.a in Frameworks */,
+				8A696BEF23B297BB00D23F7D /* libRNGestureHandler.a in Frameworks */,
+				8A696BED23B297B100D23F7D /* libPods-YoDonoFrontend.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +158,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A696BEE23B297BB00D23F7D /* libRNGestureHandler.a */,
+				8A696BEC23B297B100D23F7D /* libPods-YoDonoFrontend.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				C79857D2A85D58377F43A8CE /* libPods-YoDonoFrontend.a */,
@@ -161,13 +182,13 @@
 				7331F52EC09E5153283BFF98 /* Pods-YoDonoFrontendTests.debug.xcconfig */,
 				DE8C2B176B0153B36E0EA176 /* Pods-YoDonoFrontendTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8A696BE223B295A300D23F7D /* RNGestureHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -194,6 +215,15 @@
 				00E356EE1AD99517003FC87E /* YoDonoFrontendTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* YoDonoFrontend-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* YoDonoFrontend-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A696BE323B295A300D23F7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A696BE823B295A300D23F7D /* libRNGestureHandler.a */,
+				8A696BEA23B295A300D23F7D /* libRNGestureHandler-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,12 +338,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8A696BE323B295A300D23F7D /* Products */;
+					ProjectRef = 8A696BE223B295A300D23F7D /* RNGestureHandler.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* YoDonoFrontend */,
@@ -323,6 +360,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8A696BE823B295A300D23F7D /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = 8A696BE723B295A300D23F7D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A696BEA23B295A300D23F7D /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = 8A696BE923B295A300D23F7D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
