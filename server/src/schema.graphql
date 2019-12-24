@@ -4,12 +4,18 @@ type User {
   email: String!
   age: Int
   type: UserType
-  gender: String
+  gender: Gender
 }
 
 enum UserType {
   ONG
   COMMON
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
 }
 
 type Query {
@@ -24,7 +30,7 @@ type Mutation {
     email: String!
     age: Int
     type: UserType
-    gender: String
+    gender: Gender
   ): User!
   updateUser(
     id: ID!
@@ -32,7 +38,7 @@ type Mutation {
     email: String
     age: Int
     type: UserType
-    gender: String
+    gender: Gender
   ): User!
   deleteUser(id: ID!): User!
 }
