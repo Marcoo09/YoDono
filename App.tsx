@@ -5,12 +5,16 @@ import {AppContainer} from './src/navigation';
 import {setNavigator} from './src/common/navigation';
 import {Provider as PaperProvider} from 'react-native-paper';
 import 'react-native-gesture-handler';
+import {store} from './src/store/store';
+import {Provider as ReduxProvider} from 'react-redux';
 
 const App = () => {
   return (
-    <PaperProvider>
-      <AppContainer ref={setNavigator} />
-    </PaperProvider>
+    <ReduxProvider store={store}>
+      <PaperProvider>
+        <AppContainer ref={setNavigator} />
+      </PaperProvider>
+    </ReduxProvider>
   );
 };
 
