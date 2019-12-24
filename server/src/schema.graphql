@@ -1,0 +1,38 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  age: Int
+  type: UserType
+  gender: String
+}
+
+enum UserType {
+  ONG
+  COMMON
+}
+
+type Query {
+  users: [User!]!
+  user(id: ID!): User!
+}
+
+type Mutation {
+  createUser(
+    id: ID!
+    name: String!
+    email: String!
+    age: Int
+    type: UserType
+    gender: String
+  ): User!
+  updateUser(
+    id: ID!
+    name: String
+    email: String
+    age: Int
+    type: UserType
+    gender: String
+  ): User!
+  deleteUser(id: ID!): User!
+}
