@@ -11,6 +11,7 @@ export enum Typography {
   HEADER = 'HEADER',
   HEADER_BOLD = 'HEADER_BOLD',
   HEADER2 = 'HEADER2',
+  HEADER2_BOLD = 'HEADER2_BOLD',
   BUTTON2 = 'BUTTON2',
   BUTTON = 'BUTTON',
   BUTTON_SMALL = 'BUTTON_SMALL',
@@ -105,6 +106,10 @@ const typographies = {
   },
   [Typography.HEADER2]: {
     fontFamily: Font.Regular,
+    fontSize: 25,
+  },
+  [Typography.HEADER2_BOLD]: {
+    fontFamily: Font.Bold,
     fontSize: 25,
   },
 };
