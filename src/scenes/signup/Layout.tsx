@@ -11,7 +11,9 @@ import {YoDonoTheme} from '../../styles/General';
 import {strings} from './strings';
 import {SegmentedControl} from '../../components/SegmentedControl/SegmentedControl';
 
-export const Layout: React.FunctionComponent<LayoutProps> = () => (
+export const Layout: React.FunctionComponent<LayoutProps> = ({
+  navigateToLogin,
+}) => (
   <View style={styles.container}>
     {/* <View style={styles.logoContainer}>
       <Text>LOGO</Text>
@@ -95,10 +97,7 @@ export const Layout: React.FunctionComponent<LayoutProps> = () => (
           {strings.alreadyhaveAnAccount}
         </Text>
       </View>
-      <Button
-        mode="contained"
-        onPress={() => console.log('Pressed')}
-        color={Palette.Green}>
+      <Button mode="contained" onPress={navigateToLogin} color={Palette.Green}>
         {strings.login}
       </Button>
     </View>
