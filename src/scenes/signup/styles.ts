@@ -19,6 +19,9 @@ export const segmentedControlStyles = StyleSheet.create({
 
 export const styles = StyleSheet.create({
   bottomTextContainer: {alignItems: 'center', justifyContent: 'center'},
+  scrollViewContainer: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     paddingHorizontal: 30,

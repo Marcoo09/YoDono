@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import {styles, segmentedControlStyles} from './styles';
 import {LayoutProps} from './types';
 import {TextInput} from 'react-native-paper';
@@ -15,9 +15,6 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
   navigateToLogin,
 }) => (
   <View style={styles.container}>
-    {/* <View style={styles.logoContainer}>
-      <Text>LOGO</Text>
-    </View> */}
     <View style={styles.signUpHeaderContainer}>
       <Text
         style={getTypographyWithColor(Theme.BLACK, Typography.HEADER2_BOLD)}>
@@ -30,60 +27,64 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
       </Text>
     </View>
     <View style={[styles.secondaryContainer, styles.inputContainers]}>
-      <TextInput
-        label={strings.nameLabel}
-        maxLength={40}
-        mode={'flat'}
-        placeholder={strings.nameLabel}
-        onChangeText={() => console.warn('cambio el texto')}
-        underlineColor={Palette.Gray}
-        selectionColor={Palette.Green}
-        theme={YoDonoTheme}
-      />
-      <TextInput
-        label={strings.emailLabel}
-        maxLength={40}
-        mode={'flat'}
-        placeholder={strings.emailLabel}
-        onChangeText={() => console.warn('cambio el texto')}
-        underlineColor={Palette.Gray}
-        selectionColor={Palette.Green}
-        theme={YoDonoTheme}
-      />
-      <TextInput
-        label={strings.passwordLabel}
-        maxLength={40}
-        mode={'flat'}
-        placeholder={strings.passwordLabel}
-        onChangeText={() => console.warn('cambio el texto')}
-        secureTextEntry={true}
-        underlineColor={Palette.Gray}
-        selectionColor={Palette.Green}
-        theme={YoDonoTheme}
-      />
-      <TextInput
-        label={strings.passwordRepeatLabel}
-        maxLength={40}
-        mode={'flat'}
-        placeholder={strings.passwordRepeatLabel}
-        onChangeText={() => console.warn('cambio el texto')}
-        secureTextEntry={true}
-        underlineColor={Palette.Gray}
-        selectionColor={Palette.Green}
-        theme={YoDonoTheme}
-      />
-      <SegmentedControl
-        tabStyles={segmentedControlStyles}
-        selectedTab={0}
-        onTabPress={() => console.warn('tab pressed')}
-        tabs={[strings.male, strings.female, strings.other]}
-      />
-      <SegmentedControl
-        tabStyles={segmentedControlStyles}
-        selectedTab={0}
-        onTabPress={() => console.warn('tab pressed')}
-        tabs={[strings.ong, strings.person]}
-      />
+      <ScrollView
+        // contentContainerStyle={styles.scrollViewContainer}
+        scrollEnabled={true}>
+        <TextInput
+          label={strings.nameLabel}
+          maxLength={40}
+          mode={'flat'}
+          placeholder={strings.nameLabel}
+          onChangeText={() => console.warn('cambio el texto')}
+          underlineColor={Palette.Gray}
+          selectionColor={Palette.Green}
+          theme={YoDonoTheme}
+        />
+        <TextInput
+          label={strings.emailLabel}
+          maxLength={40}
+          mode={'flat'}
+          placeholder={strings.emailLabel}
+          onChangeText={() => console.warn('cambio el texto')}
+          underlineColor={Palette.Gray}
+          selectionColor={Palette.Green}
+          theme={YoDonoTheme}
+        />
+        <TextInput
+          label={strings.passwordLabel}
+          maxLength={40}
+          mode={'flat'}
+          placeholder={strings.passwordLabel}
+          onChangeText={() => console.warn('cambio el texto')}
+          secureTextEntry={true}
+          underlineColor={Palette.Gray}
+          selectionColor={Palette.Green}
+          theme={YoDonoTheme}
+        />
+        <TextInput
+          label={strings.passwordRepeatLabel}
+          maxLength={40}
+          mode={'flat'}
+          placeholder={strings.passwordRepeatLabel}
+          onChangeText={() => console.warn('cambio el texto')}
+          secureTextEntry={true}
+          underlineColor={Palette.Gray}
+          selectionColor={Palette.Green}
+          theme={YoDonoTheme}
+        />
+        <SegmentedControl
+          tabStyles={segmentedControlStyles}
+          selectedTab={0}
+          onTabPress={() => console.warn('tab pressed')}
+          tabs={[strings.male, strings.female, strings.other]}
+        />
+        <SegmentedControl
+          tabStyles={segmentedControlStyles}
+          selectedTab={0}
+          onTabPress={() => console.warn('tab pressed')}
+          tabs={[strings.ong, strings.person]}
+        />
+      </ScrollView>
       <Button
         mode="outlined"
         onPress={() => console.log('Pressed')}
