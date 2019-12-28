@@ -27,9 +27,7 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
       </Text>
     </View>
     <View style={[styles.secondaryContainer, styles.inputContainers]}>
-      <ScrollView
-        // contentContainerStyle={styles.scrollViewContainer}
-        scrollEnabled={true}>
+      <ScrollView scrollEnabled={true}>
         <TextInput
           label={strings.nameLabel}
           maxLength={40}
