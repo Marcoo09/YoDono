@@ -10,9 +10,7 @@ import {Palette} from '../../styles/Color';
 import {YoDonoTheme} from '../../styles/General';
 import {strings} from './strings';
 
-export const Layout: React.FunctionComponent<LayoutProps> = ({
-  navigatesToSignUp,
-}) => (
+export const Layout: React.FunctionComponent<LayoutProps> = () => (
   <View style={styles.container}>
     <View style={styles.logoContainer}>
       <Text>LOGO</Text>
@@ -65,7 +63,7 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
       </Button>
       <Button
         mode="contained"
-        onPress={navigatesToSignUp}
+        onPress={() => console.log('Pressed')}
         color={Palette.Green}>
         {strings.signUp}
       </Button>

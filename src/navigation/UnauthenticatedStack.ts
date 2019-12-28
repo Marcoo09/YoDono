@@ -1,12 +1,12 @@
 import {createStackNavigator} from 'react-navigation-stack';
 import {Login} from '../scenes/login';
 import {Route} from './Route';
+import {SignUp} from '../scenes/signup';
 
 export const UnauthenticatedStack = createStackNavigator(
   {
-    [Route.Login]: {
-      screen: Login,
-    },
+    [Route.Login]: Login,
+    [Route.SignUp]: SignUp,
   },
   {
     cardStyle: {
