@@ -1,3 +1,3 @@
 export interface LayoutProps {
-  navigatesToSignUp: () => void;
+  navigateToLogin: () => void;
 }
