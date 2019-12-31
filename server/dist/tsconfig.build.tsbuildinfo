@@ -2522,7 +2522,7 @@
         "signature": "e3e047e8cb263193af5ebae4c6030f0ddb84e6b3c6f8c8be3413ceae2c89969a"
       },
       "../src/auth/auth.controller.ts": {
-        "version": "fc7a202ddef678bc0e38ac614915112c15ff7c704b4f3e079bf38f16381f8d3c",
+        "version": "15aec73d158a36fd7ca8227d89e807bfd3657157ee4a1b96f9ee978400714370",
         "signature": "d4aebe178a2be1c0e04ddd7d1bb5bca5e4762380c209d4a8d28cb541d331a226"
       },
       "../src/auth/auth.module.ts": {
@@ -2825,6 +2825,9 @@
       "outDir": "./",
       "baseUrl": "..",
       "incremental": true,
+      "typeRoots": [
+        "../node_modules/@types"
+      ],
       "configFilePath": "../tsconfig.build.json"
     },
     "referencedMap": {
@@ -8059,6 +8062,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/auth/auth.service.ts",
         "../src/users/user.entity.ts",
+        "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -14897,6 +14901,7 @@
       "../node_modules/@nestjs/typeorm/dist/index.d.ts",
       "../node_modules/@nestjs/typeorm/index.d.ts",
       "../src/users/user.entity.ts",
+      "../src/users/users.service.ts",
       "../node_modules/@types/jsonwebtoken/index.d.ts",
       "../node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts",
       "../node_modules/@nestjs/jwt/dist/interfaces/index.d.ts",
@@ -14983,7 +14988,6 @@
       "../node_modules/@types/passport-strategy/index.d.ts",
       "../node_modules/@types/passport-jwt/index.d.ts",
       "../src/auth/jwt.strategy.ts",
-      "../src/auth/auth.controller.ts",
       "../src/auth/auth.module.ts",
       "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
@@ -15056,7 +15060,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/users/users.service.ts"
+      "../src/auth/auth.controller.ts"
     ]
   },
   "version": "3.7.4"
