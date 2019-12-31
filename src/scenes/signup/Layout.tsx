@@ -10,9 +10,29 @@ import {Palette} from '../../styles/Color';
 import {YoDonoTheme} from '../../styles/General';
 import {strings} from './strings';
 import {SegmentedControl} from '../../components/SegmentedControl/SegmentedControl';
+import {Gender, UserType} from '../../types/User/user';
+import {
+  genderTabs,
+  typesTabs,
+  getTypeByIndex,
+  getGenderByIndex,
+} from '../../types/User/utils';
 
 export const Layout: React.FunctionComponent<LayoutProps> = ({
   navigateToLogin,
+  createNewAccount,
+  fullName,
+  email,
+  password,
+  passwordRepeat,
+  genderState,
+  typeState,
+  updateFullName,
+  updateEmail,
+  updatePassword,
+  updatePasswordRepeat,
+  setGender,
+  setType,
 }) => (
   <View style={styles.container}>
     <View style={styles.signUpHeaderContainer}>
@@ -33,59 +53,79 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
           maxLength={40}
           mode={'flat'}
           placeholder={strings.nameLabel}
-          onChangeText={() => console.warn('cambio el texto')}
+          onChangeText={updateFullName}
           underlineColor={Palette.Gray}
           selectionColor={Palette.Green}
           theme={YoDonoTheme}
+          value={fullName}
         />
         <TextInput
           label={strings.emailLabel}
           maxLength={40}
           mode={'flat'}
           placeholder={strings.emailLabel}
-          onChangeText={() => console.warn('cambio el texto')}
+          onChangeText={updateEmail}
           underlineColor={Palette.Gray}
           selectionColor={Palette.Green}
           theme={YoDonoTheme}
+          value={email}
         />
         <TextInput
           label={strings.passwordLabel}
           maxLength={40}
           mode={'flat'}
           placeholder={strings.passwordLabel}
-          onChangeText={() => console.warn('cambio el texto')}
+          onChangeText={updatePassword}
           secureTextEntry={true}
           underlineColor={Palette.Gray}
           selectionColor={Palette.Green}
           theme={YoDonoTheme}
+          value={password}
         />
         <TextInput
           label={strings.passwordRepeatLabel}
           maxLength={40}
           mode={'flat'}
           placeholder={strings.passwordRepeatLabel}
-          onChangeText={() => console.warn('cambio el texto')}
+          onChangeText={updatePasswordRepeat}
           secureTextEntry={true}
           underlineColor={Palette.Gray}
           selectionColor={Palette.Green}
           theme={YoDonoTheme}
+          value={passwordRepeat}
         />
         <SegmentedControl
           tabStyles={segmentedControlStyles}
-          selectedTab={0}
-          onTabPress={() => console.warn('tab pressed')}
-          tabs={[strings.male, strings.female, strings.other]}
+          selectedTab={genderState.genderIndex}
+          onTabPress={(index: number) => {
+            setGender({
+              gender: getGenderByIndex(index),
+              genderIndex: index,
+            });
+          }}
+          tabs={genderTabs}
         />
         <SegmentedControl
           tabStyles={segmentedControlStyles}
-          selectedTab={0}
-          onTabPress={() => console.warn('tab pressed')}
-          tabs={[strings.ong, strings.person]}
+          selectedTab={typeState.typeIndex}
+          onTabPress={(index: number) => {
+            setType({
+              type: getTypeByIndex(index),
+              typeIndex: index,
+            });
+          }}
+          tabs={typesTabs}
         />
       </ScrollView>
       <Button
         mode="outlined"
-        onPress={() => console.log('Pressed')}
+        onPress={createNewAccount({
+          fullName: fullName!,
+          email: email!,
+          password: password!,
+          gender: genderState.gender,
+          type: typeState.type,
+        })}
         color={Palette.Green}>
         {strings.signUp}
       </Button>
