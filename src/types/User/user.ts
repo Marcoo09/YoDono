@@ -1,8 +1,8 @@
 export interface UserModel {
   fullName: string;
   email: string;
-  gender: Gender;
-  type: UserType;
+  gender: Gender | string;
+  type: UserType | string;
   password: string;
 }
 
@@ -15,4 +15,14 @@ export enum Gender {
 export enum UserType {
   ONG = 'ONG',
   PERSON = 'Person',
+}
+
+export interface GenderTabsState {
+  gender: string;
+  genderIndex: number;
+}
+
+export interface TypeTabsState {
+  type: string;
+  typeIndex: number;
 }

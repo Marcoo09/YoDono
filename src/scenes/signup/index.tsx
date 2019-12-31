@@ -7,6 +7,7 @@ import {useNavigatesTo} from '../../customHooks/useNavigatesTo';
 import {Route} from '../../navigation/Route';
 import {NavigationScreenComponent, NavigationParams} from 'react-navigation';
 import {useRedux} from './redux/useRedux';
+import {userFormValues} from './hooks/useFormValues';
 
 export const SignUp: NavigationScreenComponent<NavigationParams, {}> = ({
   navigation,
@@ -18,6 +19,7 @@ export const SignUp: NavigationScreenComponent<NavigationParams, {}> = ({
       <Layout
         navigateToLogin={navigateToLogin}
         createNewAccount={createNewAccount}
+        {...userFormValues()}
       />
     </SceneContainer>
   );

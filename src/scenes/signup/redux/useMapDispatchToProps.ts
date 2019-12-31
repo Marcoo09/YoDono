@@ -6,7 +6,7 @@ import {UserModel} from '../../../types/User/user';
 export const useMapDispatchToProps = () => {
   const dispatch = useDispatch();
   const createNewAccount = useCallback(
-    (user: UserModel) => dispatch(createAccount(user)),
+    (user: UserModel) => () => dispatch(createAccount(user)),
     [dispatch],
   );
   return {
