@@ -26,7 +26,7 @@ let UsersService = class UsersService {
     async findByEmail(email) {
         return await this.userRepository.findOne({
             where: {
-                email: email,
+                email,
             },
         });
     }

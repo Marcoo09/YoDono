@@ -9,25 +9,6 @@ export class UsersService {
     @InjectRepository(UserEntity)
     private userRepository: Repository<UserEntity>,
   ) {}
-  // constructor() {
-  //   this.users = [
-  //     {
-  //       userId: 1,
-  //       username: 'john',
-  //       password: 'changeme',
-  //     },
-  //     {
-  //       userId: 2,
-  //       username: 'chris',
-  //       password: 'secret',
-  //     },
-  //     {
-  //       userId: 3,
-  //       username: 'maria',
-  //       password: 'guess',
-  //     },
-  //   ];
-  // }
 
   async findAll(): Promise<UserEntity[]> {
     return await this.userRepository.find();
@@ -36,7 +17,7 @@ export class UsersService {
   async findByEmail(email: string): Promise<UserEntity> {
     return await this.userRepository.findOne({
       where: {
-        email: email,
+        email,
       },
     });
   }
