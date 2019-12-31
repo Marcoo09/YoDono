@@ -1,7 +1,10 @@
 import {Action} from 'redux';
 import {ThunkAction} from 'redux-thunk';
+import {IAuthController} from '../networking/controllers/auth';
 
-export interface ExtraArguments {}
+export interface ExtraArguments {
+  authController: IAuthController;
+}
 
 export interface ReduxStore {
   entities: EntitiesType;

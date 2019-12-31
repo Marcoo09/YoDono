@@ -8,7 +8,7 @@ export interface IAuthController {
   login(email: string, password: string): AxiosPromise<any>;
 }
 
-export class AuthController implements IAuthController {
+class AuthController implements IAuthController {
   createAccount(user: UserModel): AxiosPromise<any> {
     const config = {
       headers: {
@@ -26,3 +26,5 @@ export class AuthController implements IAuthController {
     return HttpService.post(AuthEndpoints.LOGIN, {email, password}, config);
   }
 }
+
+export default new AuthController();
