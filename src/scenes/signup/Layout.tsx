@@ -10,9 +10,11 @@ import {Palette} from '../../styles/Color';
 import {YoDonoTheme} from '../../styles/General';
 import {strings} from './strings';
 import {SegmentedControl} from '../../components/SegmentedControl/SegmentedControl';
+import {Gender, UserType} from '../../types/User/user';
 
 export const Layout: React.FunctionComponent<LayoutProps> = ({
   navigateToLogin,
+  createNewAccount,
 }) => (
   <View style={styles.container}>
     <View style={styles.signUpHeaderContainer}>
@@ -85,7 +87,15 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
       </ScrollView>
       <Button
         mode="outlined"
-        onPress={() => console.log('Pressed')}
+        onPress={() =>
+          createNewAccount({
+            fullName: 'Test',
+            email: 'ab',
+            password: 'ba',
+            gender: Gender.FEMALE,
+            type: UserType.ONG,
+          })
+        }
         color={Palette.Green}>
         {strings.signUp}
       </Button>

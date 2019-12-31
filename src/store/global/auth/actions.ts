@@ -29,7 +29,7 @@ export const createAccount: ActionCreator<ThunkResult<
         return;
       }
       const resultCreateAccount = await authController.createAccount(user);
-      console.log('resultCreateAccount', resultCreateAccount);
+      console.warn('resultCreateAccount', resultCreateAccount);
       dispatch(createAccountSuccess());
     } catch (error) {
       console.warn('error', error);

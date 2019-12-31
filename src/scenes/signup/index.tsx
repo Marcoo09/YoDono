@@ -11,11 +11,14 @@ import {useRedux} from './redux/useRedux';
 export const SignUp: NavigationScreenComponent<NavigationParams, {}> = ({
   navigation,
 }) => {
-  // const {createNewAccount} = useRedux();
+  const {createNewAccount} = useRedux();
   const navigateToLogin = useNavigatesTo({navigation, route: Route.Login});
   return (
     <SceneContainer forceInset={outerInset} style={styles.noPadding}>
-      <Layout navigateToLogin={navigateToLogin} />
+      <Layout
+        navigateToLogin={navigateToLogin}
+        createNewAccount={createNewAccount}
+      />
     </SceneContainer>
   );
 };
