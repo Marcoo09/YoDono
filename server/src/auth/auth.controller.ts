@@ -4,7 +4,6 @@ import {UserEntity} from 'src/users/user.entity';
 import {AuthGuard} from '@nestjs/passport';
 
 @Controller('auth')
-@UseGuards(AuthGuard('jwt'))
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
@@ -14,6 +13,7 @@ export class AuthController {
   }
 
   @Post('register')
+  @UseGuards(AuthGuard('jwt'))
   async register(@Body() user: UserEntity): Promise<any> {
     return this.authService.register(user);
   }

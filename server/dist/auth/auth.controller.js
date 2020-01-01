@@ -36,6 +36,7 @@ __decorate([
 ], AuthController.prototype, "login", null);
 __decorate([
     common_1.Post('register'),
+    common_1.UseGuards(passport_1.AuthGuard('jwt')),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_entity_1.UserEntity]),
@@ -43,7 +44,6 @@ __decorate([
 ], AuthController.prototype, "register", null);
 AuthController = __decorate([
     common_1.Controller('auth'),
-    common_1.UseGuards(passport_1.AuthGuard('jwt')),
     __metadata("design:paramtypes", [auth_service_1.AuthService])
 ], AuthController);
 exports.AuthController = AuthController;

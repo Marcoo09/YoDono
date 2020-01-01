@@ -2522,7 +2522,7 @@
         "signature": "e3e047e8cb263193af5ebae4c6030f0ddb84e6b3c6f8c8be3413ceae2c89969a"
       },
       "../src/auth/auth.controller.ts": {
-        "version": "15aec73d158a36fd7ca8227d89e807bfd3657157ee4a1b96f9ee978400714370",
+        "version": "9a84fc790104cc1289bef1f1ce71949caf4359fdc199e61707589516057e618b",
         "signature": "d4aebe178a2be1c0e04ddd7d1bb5bca5e4762380c209d4a8d28cb541d331a226"
       },
       "../src/auth/auth.module.ts": {

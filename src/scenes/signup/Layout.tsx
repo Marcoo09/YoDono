@@ -10,7 +10,6 @@ import {Palette} from '../../styles/Color';
 import {YoDonoTheme} from '../../styles/General';
 import {strings} from './strings';
 import {SegmentedControl} from '../../components/SegmentedControl/SegmentedControl';
-import {Gender, UserType} from '../../types/User/user';
 import {
   genderTabs,
   typesTabs,

@@ -12,6 +12,11 @@ import {strings} from './strings';
 
 export const Layout: React.FunctionComponent<LayoutProps> = ({
   navigatesToSignUp,
+  email,
+  password,
+  updateEmail,
+  updatePassword,
+  loginHandler,
 }) => (
   <View style={styles.container}>
     <View style={styles.logoContainer}>
@@ -34,21 +39,23 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
         maxLength={40}
         mode={'flat'}
         placeholder={strings.emailLabel}
-        onChangeText={() => console.warn('cambio el texto')}
+        onChangeText={updateEmail}
         underlineColor={Palette.Gray}
         selectionColor={Palette.Green}
         theme={YoDonoTheme}
+        value={email}
       />
       <TextInput
         label={strings.passwordLabel}
         maxLength={40}
         mode={'flat'}
         placeholder={strings.passwordLabel}
-        onChangeText={() => console.warn('cambio el texto')}
+        onChangeText={updatePassword}
         secureTextEntry={true}
         underlineColor={Palette.Gray}
         selectionColor={Palette.Green}
         theme={YoDonoTheme}
+        value={password}
       />
     </View>
     <View style={styles.forgotPasswordContainer}>
@@ -59,7 +66,7 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
     <View style={styles.secondaryContainer}>
       <Button
         mode="contained"
-        onPress={() => console.log('Pressed')}
+        onPress={loginHandler(email, password)}
         color={Palette.Green}>
         {strings.login}
       </Button>
