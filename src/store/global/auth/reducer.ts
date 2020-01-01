@@ -18,12 +18,27 @@ export const AuthReducer: Reducer<AuthState, AuthActions> = (
       return {
         ...state,
         success: true,
+        loading: false,
       };
     case actionTypes.CREATE_ACCOUNT_FAILURE:
       return {
         ...state,
         success: false,
-        error: 'An error occur',
+        error: 'An error occur when create account',
+        loading: false,
+      };
+    case actionTypes.LOGIN_SUCCESS:
+      return {
+        ...state,
+        success: true,
+        loading: false,
+      };
+    case actionTypes.LOGIN_FAILURE:
+      return {
+        ...state,
+        success: false,
+        error: 'An error occur when login',
+        loading: false,
       };
     default:
       return state;

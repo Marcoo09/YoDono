@@ -16,11 +16,16 @@ export interface CreateAccountFailure extends Action {
   type: actionTypes.CREATE_ACCOUNT_FAILURE;
 }
 
-export type AuthActions = CreateAccountSuccess | CreateAccountFailure;
+export interface LoginSuccess extends Action {
+  type: actionTypes.LOGIN_SUCCESS;
+}
 
-export type ThunkResult<S, E, A extends Action> = ThunkAction<
-  Promise<void>,
-  S,
-  E,
-  A
->;
+export interface LoginFailure extends Action {
+  type: actionTypes.LOGIN_FAILURE;
+}
+
+export type AuthActions =
+  | CreateAccountSuccess
+  | CreateAccountFailure
+  | LoginSuccess
+  | LoginFailure;

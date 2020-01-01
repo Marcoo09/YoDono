@@ -13,6 +13,14 @@ export const createAccountFailure: ActionCreator<AuthActions> = () => ({
   type: actionTypes.CREATE_ACCOUNT_FAILURE,
 });
 
+export const loginSuccess: ActionCreator<AuthActions> = () => ({
+  type: actionTypes.LOGIN_SUCCESS,
+});
+
+export const loginFailure: ActionCreator<AuthActions> = () => ({
+  type: actionTypes.LOGIN_FAILURE,
+});
+
 export const createAccount: ActionCreator<ThunkResult<
   AuthState,
   ExtraArguments,
@@ -29,11 +37,36 @@ export const createAccount: ActionCreator<ThunkResult<
         return;
       }
       const resultCreateAccount = await authController.createAccount(user);
-      console.warn('resultCreateAccount', resultCreateAccount);
+      console.warn('Create account success', resultCreateAccount);
       dispatch(createAccountSuccess());
     } catch (error) {
       console.warn('error', error);
       dispatch(createAccountFailure());
+    }
+  };
+};
+
+export const login: ActionCreator<ThunkResult<
+  AuthState,
+  ExtraArguments,
+  AuthActions
+>> = (email?: string, password?: string) => {
+  return async (
+    dispatch: ThunkDispatch<AuthActions, ExtraArguments, AuthActions>,
+    _,
+    {authController},
+  ) => {
+    try {
+      if (!email || !password) {
+        console.warn('Without email or password');
+        return;
+      }
+      const resultLogin = await authController.login(email, password);
+      console.warn('Login success', resultLogin);
+      dispatch(loginSuccess());
+    } catch (error) {
+      console.warn('error', error);
+      dispatch(loginFailure());
     }
   };
 };

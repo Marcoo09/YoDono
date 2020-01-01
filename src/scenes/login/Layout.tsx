@@ -16,6 +16,7 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
   password,
   updateEmail,
   updatePassword,
+  loginHandler,
 }) => (
   <View style={styles.container}>
     <View style={styles.logoContainer}>
@@ -65,7 +66,7 @@ export const Layout: React.FunctionComponent<LayoutProps> = ({
     <View style={styles.secondaryContainer}>
       <Button
         mode="contained"
-        onPress={() => console.log('Pressed')}
+        onPress={loginHandler(email, password)}
         color={Palette.Green}>
         {strings.login}
       </Button>
