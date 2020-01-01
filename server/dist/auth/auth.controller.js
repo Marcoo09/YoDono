@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const auth_service_1 = require("./auth.service");
 const user_entity_1 = require("../users/user.entity");
-const passport_1 = require("@nestjs/passport");
 let AuthController = class AuthController {
     constructor(authService) {
         this.authService = authService;
@@ -36,7 +35,6 @@ __decorate([
 ], AuthController.prototype, "login", null);
 __decorate([
     common_1.Post('register'),
-    common_1.UseGuards(passport_1.AuthGuard('jwt')),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_entity_1.UserEntity]),

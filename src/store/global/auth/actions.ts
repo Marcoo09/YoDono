@@ -4,6 +4,17 @@ import {AuthActions, AuthState} from './types';
 import {UserModel} from '../../../types/User/user';
 import {ThunkDispatch} from 'redux-thunk';
 import {actionTypes} from './actionTypes';
+import {SetupInterceptors} from '../../../networking/interceptors/SetupInterceptors';
+import {persistSession} from '../../../common/sessionPersistence';
+
+export const setSession = async (result: any): Promise<void> => {
+  const session = result;
+  if (session) {
+    await persistSession(session);
+    SetupInterceptors(session);
+    // dispatchNavigation(navigateToAuthenticated)
+  }
+};
 
 export const createAccountSuccess: ActionCreator<AuthActions> = () => ({
   type: actionTypes.CREATE_ACCOUNT_SUCCESS,
@@ -61,8 +72,8 @@ export const login: ActionCreator<ThunkResult<
         console.warn('Without email or password');
         return;
       }
-      const resultLogin = await authController.login(email, password);
-      console.warn('Login success', resultLogin);
+      const result = await authController.login(email, password);
+      await setSession(result);
       dispatch(loginSuccess());
     } catch (error) {
       console.warn('error', error);
