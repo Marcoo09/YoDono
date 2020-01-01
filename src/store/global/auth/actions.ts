@@ -73,8 +73,8 @@ export const login: ActionCreator<ThunkResult<
         return;
       }
       const result = await authController.login(email, password);
-      await setSession(result);
       dispatch(loginSuccess());
+      await setSession(result);
     } catch (error) {
       console.warn('error', error);
       dispatch(loginFailure());

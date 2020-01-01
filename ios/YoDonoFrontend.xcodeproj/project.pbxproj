@@ -20,6 +20,7 @@
 		5F2934260ECB96CE5DAD98DF /* libPods-YoDonoFrontend-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 233481349E4A17971E26DD5D /* libPods-YoDonoFrontend-tvOS.a */; };
 		7878F9C568837957280F4502 /* libPods-YoDonoFrontendTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9A4BFB9797BE337F1D1A3C /* libPods-YoDonoFrontendTests.a */; };
 		8A5B8C2623BB570200C85879 /* libRNLocalize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5B8C2523BB570200C85879 /* libRNLocalize.a */; };
+		8A5E26F523BD62DB00ED8854 /* libRNSecureKeyStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5E26F423BD62DB00ED8854 /* libRNSecureKeyStore.a */; };
 		8A696BED23B297B100D23F7D /* libPods-YoDonoFrontend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A696BEC23B297B100D23F7D /* libPods-YoDonoFrontend.a */; };
 		8A696BEF23B297BB00D23F7D /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A696BEE23B297BB00D23F7D /* libRNGestureHandler.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2D2A28471D9B043800D4039D;
 			remoteInfo = "RNLocalize-tvOS";
+		};
+		8A5E26F023BD62BF00ED8854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5E26E723BD62BF00ED8854 /* RNSecureKeyStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSecureKeyStore;
+		};
+		8A5E26F223BD62BF00ED8854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5E26E723BD62BF00ED8854 /* RNSecureKeyStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 465057B52107394900FD399B;
+			remoteInfo = "RNSecureKeyStore-tvOS";
 		};
 		8A696BE723B295A300D23F7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -94,6 +109,8 @@
 		88D7A5DAC197E54A6127B49E /* Pods-YoDonoFrontend-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoDonoFrontend-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-YoDonoFrontend-tvOS/Pods-YoDonoFrontend-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8A5B8C1A23BB56E200C85879 /* RNLocalize.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNLocalize.xcodeproj; path = "../node_modules/react-native-localize/ios/RNLocalize.xcodeproj"; sourceTree = "<group>"; };
 		8A5B8C2523BB570200C85879 /* libRNLocalize.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNLocalize.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A5E26E723BD62BF00ED8854 /* RNSecureKeyStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSecureKeyStore.xcodeproj; path = "../node_modules/react-native-secure-key-store/ios/RNSecureKeyStore.xcodeproj"; sourceTree = "<group>"; };
+		8A5E26F423BD62DB00ED8854 /* libRNSecureKeyStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNSecureKeyStore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A696BE223B295A300D23F7D /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		8A696BEC23B297B100D23F7D /* libPods-YoDonoFrontend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-YoDonoFrontend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A696BEE23B297BB00D23F7D /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5E26F523BD62DB00ED8854 /* libRNSecureKeyStore.a in Frameworks */,
 				8A5B8C2623BB570200C85879 /* libRNLocalize.a in Frameworks */,
 				8A696BEF23B297BB00D23F7D /* libRNGestureHandler.a in Frameworks */,
 				8A696BED23B297B100D23F7D /* libPods-YoDonoFrontend.a in Frameworks */,
@@ -176,6 +194,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A5E26F423BD62DB00ED8854 /* libRNSecureKeyStore.a */,
 				8A5B8C2523BB570200C85879 /* libRNLocalize.a */,
 				8A696BEE23B297BB00D23F7D /* libRNGestureHandler.a */,
 				8A696BEC23B297B100D23F7D /* libPods-YoDonoFrontend.a */,
@@ -207,6 +226,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8A5E26E723BD62BF00ED8854 /* RNSecureKeyStore.xcodeproj */,
 				8A5B8C1A23BB56E200C85879 /* RNLocalize.xcodeproj */,
 				8A696BE223B295A300D23F7D /* RNGestureHandler.xcodeproj */,
 			);
@@ -244,6 +264,15 @@
 			children = (
 				8A5B8C2223BB56E200C85879 /* libRNLocalize.a */,
 				8A5B8C2423BB56E200C85879 /* libRNLocalize-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A5E26E823BD62BF00ED8854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A5E26F123BD62BF00ED8854 /* libRNSecureKeyStore.a */,
+				8A5E26F323BD62BF00ED8854 /* libRNSecureKeyStore-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -384,6 +413,10 @@
 					ProductGroup = 8A5B8C1B23BB56E200C85879 /* Products */;
 					ProjectRef = 8A5B8C1A23BB56E200C85879 /* RNLocalize.xcodeproj */;
 				},
+				{
+					ProductGroup = 8A5E26E823BD62BF00ED8854 /* Products */;
+					ProjectRef = 8A5E26E723BD62BF00ED8854 /* RNSecureKeyStore.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -408,6 +441,20 @@
 			fileType = archive.ar;
 			path = "libRNLocalize-tvOS.a";
 			remoteRef = 8A5B8C2323BB56E200C85879 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A5E26F123BD62BF00ED8854 /* libRNSecureKeyStore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSecureKeyStore.a;
+			remoteRef = 8A5E26F023BD62BF00ED8854 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A5E26F323BD62BF00ED8854 /* libRNSecureKeyStore-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNSecureKeyStore-tvOS.a";
+			remoteRef = 8A5E26F223BD62BF00ED8854 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		8A696BE823B295A300D23F7D /* libRNGestureHandler.a */ = {
