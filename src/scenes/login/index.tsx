@@ -6,6 +6,7 @@ import {Layout} from './Layout';
 import {NavigationScreenComponent, NavigationParams} from 'react-navigation';
 import {useNavigatesTo} from '../../customHooks/useNavigatesTo';
 import {Route} from '../../navigation/Route';
+import {userFormValues} from './hooks/useFormValues';
 
 export const Login: NavigationScreenComponent<NavigationParams, {}> = ({
   navigation,
@@ -13,7 +14,7 @@ export const Login: NavigationScreenComponent<NavigationParams, {}> = ({
   const navigatesToSignUp = useNavigatesTo({navigation, route: Route.SignUp});
   return (
     <SceneContainer forceInset={outerInset} style={styles.noPadding}>
-      <Layout navigatesToSignUp={navigatesToSignUp} />
+      <Layout navigatesToSignUp={navigatesToSignUp} {...userFormValues()} />
     </SceneContainer>
   );
 };
