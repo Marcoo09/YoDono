@@ -1,7 +1,7 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { UsersService } from '../users/users.service';
-import { JwtService } from '@nestjs/jwt';
-import { UserEntity } from '../users//user.entity';
+import {Injectable, UnauthorizedException} from '@nestjs/common';
+import {UsersService} from '../users/users.service';
+import {JwtService} from '@nestjs/jwt';
+import {UserEntity} from '../users//user.entity';
 @Injectable()
 export class AuthService {
   constructor(
@@ -22,11 +22,14 @@ export class AuthService {
       if (!userData) {
         return new UnauthorizedException();
       }
-      const payload = { username: user.email, sub: user.id };
+      const payload = {username: user.email, sub: user.id};
       const accessToken = this.jwtService.sign(payload);
 
       return {
+        token_type: 'Bearer',
+        expires_in: '3600s',
         access_token: accessToken,
+        scope: 'global',
         status: 200,
       };
     });

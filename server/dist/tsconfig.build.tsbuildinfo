@@ -2206,8 +2206,8 @@
         "signature": "a2b176f66f0b708241265fb3b417597c9c9d21912bbb7f5cc00d99af551c2078"
       },
       "../src/auth/auth.service.ts": {
-        "version": "d782b6ff1850545d5a748f9c751b14b1361b2422c772748882e44402c0c619e6",
-        "signature": "85b8fbae81e2dedb8f52538d7c2f421507fc8799a1adf876ea1deb80ab16cf66"
+        "version": "4581bf5cac69ea6e3acafc8673787d9dd992d40cdaa9b04873b432bc9c3b113c",
+        "signature": "fed42f941631ed78aa1ea443e346968a63b5d682899e39345cf115052209075d"
       },
       "../src/app.controller.ts": {
         "version": "23ea00c0fb1a1eb87c1dbe765cc8b62b4eb2bc2d702c9e53ea366008ee0b6acf",
@@ -2522,8 +2522,8 @@
         "signature": "e3e047e8cb263193af5ebae4c6030f0ddb84e6b3c6f8c8be3413ceae2c89969a"
       },
       "../src/auth/auth.controller.ts": {
-        "version": "9a84fc790104cc1289bef1f1ce71949caf4359fdc199e61707589516057e618b",
-        "signature": "d4aebe178a2be1c0e04ddd7d1bb5bca5e4762380c209d4a8d28cb541d331a226"
+        "version": "58274152747c9f7e71428c6b441fcf56b484b7aa4472edbe32783c9cde12db29",
+        "signature": "c5d5908accc24fa047aede76d761fbb58fa650029a6d12ed7bff316298afbd60"
       },
       "../src/auth/auth.module.ts": {
         "version": "f5939b33aaec52e7d568dc7809832b10dbdaeab60c631a0411955ae9bf4591b9",
@@ -8062,7 +8062,6 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/auth/auth.service.ts",
         "../src/users/user.entity.ts",
-        "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -14909,8 +14908,6 @@
       "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts",
       "../node_modules/@nestjs/jwt/dist/index.d.ts",
       "../node_modules/@nestjs/jwt/index.d.ts",
-      "../src/auth/auth.service.ts",
-      "../src/app.controller.ts",
       "../src/app.service.ts",
       "../node_modules/@nestjsx/crud-request/lib/exceptions/request-query.exception.d.ts",
       "../node_modules/@nestjsx/crud-request/lib/exceptions/index.d.ts",
@@ -14988,8 +14985,6 @@
       "../node_modules/@types/passport-strategy/index.d.ts",
       "../node_modules/@types/passport-jwt/index.d.ts",
       "../src/auth/jwt.strategy.ts",
-      "../src/auth/auth.module.ts",
-      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -15025,7 +15020,6 @@
       "../node_modules/@nestjs/core/services/reflector.service.d.ts",
       "../node_modules/@nestjs/core/services/index.d.ts",
       "../node_modules/@nestjs/core/index.d.ts",
-      "../src/main.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -15060,7 +15054,12 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/auth/auth.controller.ts"
+      "../src/auth/auth.service.ts",
+      "../src/auth/auth.module.ts",
+      "../src/auth/auth.controller.ts",
+      "../src/app.controller.ts",
+      "../src/app.module.ts",
+      "../src/main.ts"
     ]
   },
   "version": "3.7.4"

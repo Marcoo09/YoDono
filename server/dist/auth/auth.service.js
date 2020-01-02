@@ -32,7 +32,10 @@ let AuthService = class AuthService {
             const payload = { username: user.email, sub: user.id };
             const accessToken = this.jwtService.sign(payload);
             return {
+                token_type: 'Bearer',
+                expires_in: '3600s',
                 access_token: accessToken,
+                scope: 'global',
                 status: 200,
             };
         });

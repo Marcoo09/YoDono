@@ -8,7 +8,10 @@ export declare class AuthService {
     constructor(usersService: UsersService, jwtService: JwtService);
     validateUser(userData: UserEntity): Promise<any>;
     login(user: UserEntity): Promise<UnauthorizedException | {
+        token_type: string;
+        expires_in: string;
         access_token: string;
+        scope: string;
         status: number;
     }>;
     register(user: UserEntity): Promise<any>;

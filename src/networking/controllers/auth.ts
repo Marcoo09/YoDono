@@ -6,6 +6,7 @@ import {UserModel} from '../../types/User/user';
 export interface IAuthController {
   createAccount(user: UserModel): AxiosPromise<any>;
   login(email: string, password: string): AxiosPromise<any>;
+  getProfile(): AxiosPromise<any>;
 }
 
 class AuthController implements IAuthController {
@@ -24,6 +25,9 @@ class AuthController implements IAuthController {
       },
     };
     return HttpService.post(AuthEndpoints.LOGIN, {email, password}, config);
+  }
+  getProfile(): AxiosPromise<any> {
+    return HttpService.get(AuthEndpoints.PROFILE);
   }
 }
 
