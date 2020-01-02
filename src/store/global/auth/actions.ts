@@ -9,6 +9,8 @@ import {persistSession} from '../../../common/sessionPersistence';
 import {get} from 'lodash';
 import {AxiosResponse} from 'axios';
 import {Session} from '../../../types/Session/session';
+import {dispatch as dispatchNavigation} from '../../../common/navigation';
+import {navigateToAuthenticated} from './navigationHelpers';
 
 export const setSession = async (
   result: AxiosResponse<Session>,
@@ -17,7 +19,7 @@ export const setSession = async (
   if (session) {
     await persistSession(session);
     SetupInterceptors(session);
-    // dispatchNavigation(navigateToAuthenticated)
+    dispatchNavigation(navigateToAuthenticated);
   }
 };
 
