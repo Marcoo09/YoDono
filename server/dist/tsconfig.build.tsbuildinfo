@@ -2209,8 +2209,24 @@
         "version": "4581bf5cac69ea6e3acafc8673787d9dd992d40cdaa9b04873b432bc9c3b113c",
         "signature": "fed42f941631ed78aa1ea443e346968a63b5d682899e39345cf115052209075d"
       },
+      "../src/common/error/apperrortypeenum.ts": {
+        "version": "40b05e6a0522b04d2a6caada54680108e6ae2b84bea8af684df305eb08c0b21a",
+        "signature": "5a683493b583884a6cbfacffa5727df1b0256f981a38618a96c61023dcdaed1b"
+      },
+      "../src/common/error/ierrormessage.ts": {
+        "version": "f18b89dad08509cd227a9e82250d5492d25dbd7f4fa0e7f69db24b6db73d2107",
+        "signature": "268e9a9d247555d9c527330cab8a8184b0963b160f8325dcad9d89610281b044"
+      },
+      "../src/common/error/apperror.ts": {
+        "version": "b350bf724064edcb15e822bba59038cafb071afc2790a01664dbab818a9dabb6",
+        "signature": "c994a7471944a2d8d89133f1120bc3107d674eb4251581941918b5014bffa4a1"
+      },
+      "../src/common/session.guard.ts": {
+        "version": "bfcff109797dea22242c037d77221b8c0ff48f40698b2090ea04736fa3b45da4",
+        "signature": "e32484f34556f0dbe37181bd84ef22cabc14eef16edffa594ba8dd02c7314dca"
+      },
       "../src/app.controller.ts": {
-        "version": "23ea00c0fb1a1eb87c1dbe765cc8b62b4eb2bc2d702c9e53ea366008ee0b6acf",
+        "version": "5a993013f3090cf1883a1921ec84de8ee929fd1f500d833945d8b554626dec55",
         "signature": "ee058822ab7fd21b9b25a6d93d32949328974640b6965c7e16fc5c22dbf79d5b"
       },
       "../src/app.service.ts": {
@@ -7429,11 +7445,44 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/common/error/apperrortypeenum.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/common/error/ierrormessage.ts": [
+        "../src/common/error/apperrortypeenum.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/common/error/apperror.ts": [
+        "../src/common/error/apperrortypeenum.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/common/error/ierrormessage.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/common/session.guard.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/common/error/apperrortypeenum.ts",
+        "../src/common/error/apperror.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/passport/index.d.ts",
         "../src/auth/auth.service.ts",
         "../src/users/user.entity.ts",
+        "../src/common/session.guard.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -13237,6 +13286,16 @@
         "../src/users/user.entity.ts",
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../src/common/error/ierrormessage.ts": [
+        "../src/common/error/apperrortypeenum.ts",
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/common/error/apperror.ts": [
+        "../src/common/error/apperrortypeenum.ts"
+      ],
+      "../src/common/session.guard.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../src/auth/auth.service.ts",
         "../src/users/user.entity.ts"
@@ -14908,6 +14967,11 @@
       "../node_modules/@nestjs/jwt/dist/jwt.service.d.ts",
       "../node_modules/@nestjs/jwt/dist/index.d.ts",
       "../node_modules/@nestjs/jwt/index.d.ts",
+      "../src/auth/auth.service.ts",
+      "../src/common/error/apperrortypeenum.ts",
+      "../src/common/error/ierrormessage.ts",
+      "../src/common/error/apperror.ts",
+      "../src/common/session.guard.ts",
       "../src/app.service.ts",
       "../node_modules/@nestjsx/crud-request/lib/exceptions/request-query.exception.d.ts",
       "../node_modules/@nestjsx/crud-request/lib/exceptions/index.d.ts",
@@ -14985,6 +15049,9 @@
       "../node_modules/@types/passport-strategy/index.d.ts",
       "../node_modules/@types/passport-jwt/index.d.ts",
       "../src/auth/jwt.strategy.ts",
+      "../src/auth/auth.controller.ts",
+      "../src/auth/auth.module.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -15020,6 +15087,7 @@
       "../node_modules/@nestjs/core/services/reflector.service.d.ts",
       "../node_modules/@nestjs/core/services/index.d.ts",
       "../node_modules/@nestjs/core/index.d.ts",
+      "../src/main.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -15054,12 +15122,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/auth/auth.service.ts",
-      "../src/auth/auth.module.ts",
-      "../src/auth/auth.controller.ts",
-      "../src/app.controller.ts",
-      "../src/app.module.ts",
-      "../src/main.ts"
+      "../src/app.controller.ts"
     ]
   },
   "version": "3.7.4"
