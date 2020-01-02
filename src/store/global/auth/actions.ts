@@ -6,9 +6,14 @@ import {ThunkDispatch} from 'redux-thunk';
 import {actionTypes} from './actionTypes';
 import {SetupInterceptors} from '../../../networking/interceptors/SetupInterceptors';
 import {persistSession} from '../../../common/sessionPersistence';
+import {get} from 'lodash';
+import {AxiosResponse} from 'axios';
+import {Session} from '../../../types/Session/session';
 
-export const setSession = async (result: any): Promise<void> => {
-  const session = result;
+export const setSession = async (
+  result: AxiosResponse<Session>,
+): Promise<void> => {
+  const session = get(result, 'data');
   if (session) {
     await persistSession(session);
     SetupInterceptors(session);
