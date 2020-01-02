@@ -1,5 +1,7 @@
 export enum Route {
-  Login = 'Login',
   UnauthenticatedStack = 'UnauthenticatedStack',
+  AuthenticatedStack = 'AuthenticatedStack',
+  Login = 'Login',
   SignUp = 'SignUp',
+  Home = 'Home',
 }
